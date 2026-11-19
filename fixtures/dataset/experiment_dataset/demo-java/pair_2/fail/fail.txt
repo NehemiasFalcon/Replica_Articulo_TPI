@@ -1,0 +1,13 @@
+Init job
+Maven dependencies cached
+mvn test -q
+Compiling module API
+Compilation success
+Running tests
+Tests in UserServiceTest
+UserServiceTest.createUser SUCCESS
+Running InvoiceServiceTest
+java.lang.NullPointerException
+InvoiceServiceTest.processInvoice FAIL
+mvn test failed
+Build failure

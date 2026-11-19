@@ -1,0 +1,60 @@
+LOGSAGE - EXPERIMENTACION SIN API DE PAGO
+
+Resultados YA ejecutados:
+  results/original-heuristic/cases.csv
+  results/original-heuristic/summary.json
+  results/preprocessing/preprocessing_cases.csv
+  results/preprocessing/summary.json
+  results/original-published-reanalysis/paper_table_II_recalculated.csv
+  results/original-published-reanalysis/ablation_recalculated.csv
+
+Los resultados de GPT-4o, Claude y DeepSeek son calculados a partir de los CSV
+ORIGINALES de autores. NO son inferencias nuevas nuestras.
+El metodo heuristic NO es IA: es linea base local gratuita.
+El preprocesador es nuestra reimplementacion aproximada, no F1 RCA del paper.
+
+Ejecutar de nuevo en Windows, terminal PowerShell dentro de esta carpeta:
+  python reanalyze_results.py
+  python preprocess_eval.py
+  python experiment.py --dataset-root data_original --mode heuristic --out results/original-heuristic
+
+Para diagnostico con IA local gratuita (necesita instalar Ollama en Windows):
+  ollama pull qwen2.5-coder:3b
+  python experiment.py --dataset-root data_original --mode ollama --model qwen2.5-coder:3b --limit 5 --out results/ollama-prueba
+  python experiment.py --dataset-root data_original --mode ollama --model qwen2.5-coder:3b --limit 0 --out results/ollama-todos
+
+Si Ollama no se ejecuta automaticamente, inicia 'ollama serve' en otra terminal.
+No se usa OPENAI_API_KEY y no se cobra ninguna API.
+La inferencia local no ha sido ejecutada en el entorno de ChatGPT.
+
+=== NUEVO: DEMOSTRACION DE REMEDIACION (FASE 2) ===
+IMPORTANTE: Los 250 casos publicos solo contienen logs y etiquetas, NO
+repositorios listos para reparar. Esta demo usa proyectos pequenos EJECUTABLES,
+creados dentro de results/*/workspaces. No toca repositorios personales.
+
+1) Prueba de funcionamiento SIN IA (comprueba la logica de correccion):
+   python -u remediation_demo.py --mode rule --scenario all --apply --out results/remediacion-reglas
+
+2) Demo CON IA LOCAL GRATIS, cuando Ollama ya este funcionando:
+   ollama list
+   python -u remediation_demo.py --mode ollama --model qwen2.5-coder:3b --scenario both --apply --out results/remediacion-ollama
+
+3) Ver un caso para exponer ante el profesor (fallo -> IA -> diff -> retest):
+   python mostrar_remediacion.py --out results/remediacion-ollama --scenario unit
+   python mostrar_remediacion.py --out results/remediacion-ollama --scenario lint
+
+4) Resultados de remediacion:
+   results/remediacion-ollama/summary.json
+   results/remediacion-ollama/remediation_cases.csv
+   results/remediacion-ollama/unit_detail.json
+   results/remediacion-ollama/unit_patch.diff
+
+La seleccion de herramienta es realizada por Qwen en modo ollama; la ejecucion
+utiliza herramientas predeterminadas y seguras en un sandbox. "rule" NO usa IA.
+La reparacion de pruebas unitarias extiende el alcance del paper original;
+'lint_fix' es una herramienta inspirada en LogSage. No se replica el RAG privado
+de ByteDance ni sus resultados industriales con estos ejemplos controlados.
+
+Para previsualizar sin modificar siquiera el workspace de codigo:
+   python remediation_demo.py --mode ollama --scenario unit --out results/preview
+Omitir --apply impide ejecutar parches.

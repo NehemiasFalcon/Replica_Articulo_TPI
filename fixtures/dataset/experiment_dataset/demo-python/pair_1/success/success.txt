@@ -1,0 +1,6 @@
+Setup Python
+pip install complete
+pytest -q
+collecting 9 items
+Tests passed
+Build success

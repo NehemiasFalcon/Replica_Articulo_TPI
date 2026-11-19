@@ -1,0 +1,6 @@
+Install dependencies
+npm ci completed
+Build application
+compiled 25 files
+Tests passed
+Build success

@@ -1,0 +1,42 @@
+{
+  "scenario": "lint",
+  "mode": "rule",
+  "model": null,
+  "workspace": "/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/lint",
+  "initial": {
+    "stage": "STATIC_ANALYSIS",
+    "exit_code": 1,
+    "output": "src/report.py:1: TRAILING_WHITESPACE\nsrc/report.py:2: TRAILING_WHITESPACE\n\n",
+    "seconds": 0.695
+  },
+  "diagnosis": "STATIC_ANALYSIS: report.py has trailing whitespace causing the quality gate to fail.",
+  "knowledge": [
+    {
+      "source": "LOCAL_TOOL_GUIDE/lint",
+      "text": "Static quality gate: remove trailing spaces/tabs at line endings in src/*.py."
+    }
+  ],
+  "selected_tool": "lint_fix",
+  "tool_reason": "Offline deterministic rule baseline (NOT an LLM prediction)",
+  "model_tool_response": "",
+  "remediation": {
+    "applied": true,
+    "error": "",
+    "patch": "--- before/src/report.py\n+++ after/src/report.py\n@@ -1,2 +1,2 @@\n-def title(text: str) -> str:   \n-    return text.strip().title()  \n+def title(text: str) -> str:\n+    return text.strip().title()\n",
+    "file": "src/report.py"
+  },
+  "recheck": {
+    "stage": "UNIT_TESTS",
+    "exit_code": 0,
+    "output": "\ntest_title (test_report.ReportTests.test_title) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "seconds": 0.691
+  },
+  "build": {
+    "stage": "BUILD",
+    "exit_code": 0,
+    "output": "\n",
+    "seconds": 0.689
+  },
+  "success": true,
+  "seconds": 2.772
+}

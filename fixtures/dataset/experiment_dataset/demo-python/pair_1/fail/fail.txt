@@ -1,0 +1,10 @@
+Setup Python
+pip install complete
+pytest -q
+collecting 9 items
+test_user.py::test_login PASSED
+test_user.py::test_logout PASSED
+test_payment.py::test_payment FAILED
+AssertionError: assert 405 == 200
+FAILED test_payment.py::test_payment
+exit code 1

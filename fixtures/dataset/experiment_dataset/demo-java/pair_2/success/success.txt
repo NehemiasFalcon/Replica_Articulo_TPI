@@ -1,0 +1,6 @@
+Init job
+Maven dependencies cached
+mvn test -q
+Compiling module API
+Tests passed
+Build success

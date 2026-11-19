@@ -1,0 +1,5 @@
+﻿method,variant,cases,TP,FP,FN,precision,recall,f1,avg_tokens
+LogSage,default,250,243,5,0,0.9798,1.0,0.9898,15369.0
+LogSage_NoExpand,NoExpand,250,237,9,0,0.9634,1.0,0.9814,15833.6
+LogSage_NoFilter,NoFilter,250,224,24,0,0.9032,1.0,0.9492,14116.1
+LogSage_OriginalLog,OriginalLog,250,143,15,56,0.9051,0.7186,0.8011,39971.0

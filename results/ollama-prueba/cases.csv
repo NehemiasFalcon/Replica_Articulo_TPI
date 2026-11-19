@@ -1,0 +1,6 @@
+﻿case_id,project,pair,lines,label_start,label_end,mode,model,prediction_count,matched_count,precision_citas,localizacion_any,localizacion_90,prompt_tokens_approx,seconds,error,cited_lines,label_ranges
+AdminLTE/pair_1,AdminLTE,pair_1,325,47,323,ollama,qwen2.5-coder:3b,0,0,0,0,0,5427,433.626,,,"[[47, 323]]"
+AdminLTE/pair_2,AdminLTE,pair_2,342,199,331,ollama,qwen2.5-coder:3b,0,0,0,0,0,5458,212.923,,,"[[199, 331]]"
+alpine/pair_1,alpine,pair_1,335,47,333,ollama,qwen2.5-coder:3b,0,0,0,0,0,5287,274.648,,,"[[47, 333]]"
+alpine/pair_2,alpine,pair_2,1359,522,1346,ollama,qwen2.5-coder:3b,0,0,0,0,0,5255,233.123,,,"[[522, 1346]]"
+AutoGPT/pair_1,AutoGPT,pair_1,550,166,537,ollama,qwen2.5-coder:3b,0,0,0,0,0,5487,203.611,,,"[[166, 537]]"

@@ -1,0 +1,42 @@
+{
+  "scenario": "unit",
+  "mode": "rule",
+  "model": null,
+  "workspace": "/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unit",
+  "initial": {
+    "stage": "UNIT_TESTS",
+    "exit_code": 1,
+    "output": "\ntest_negative (test_calculator.CalculatorTests.test_negative) ... FAIL\ntest_positive (test_calculator.CalculatorTests.test_positive) ... FAIL\ntest_zero (test_calculator.CalculatorTests.test_zero) ... FAIL\n\n======================================================================\nFAIL: test_negative (test_calculator.CalculatorTests.test_negative)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unit/tests/test_calculator.py\", line 12, in test_negative\n    self.assertEqual(add(-2, 3), 1)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\nAssertionError: -5 != 1\n\n======================================================================\nFAIL: test_positive (test_calculator.CalculatorTests.test_positive)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unit/tests/test_calculator.py\", line 6, in test_positive\n    self.assertEqual(add(2, 3), 5)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\nAssertionError: -1 != 5\n\n======================================================================\nFAIL: test_zero (test_calculator.CalculatorTests.test_zero)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unit/tests/test_calculator.py\", line 9, in test_zero\n    self.assertEqual(add(0, 4), 4)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\nAssertionError: -4 != 4\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nFAILED (failures=3)\n",
+    "seconds": 0.728
+  },
+  "diagnosis": "UNIT_TESTS: add(2,3) returned -1 instead of 5. The add function uses subtraction instead of addition.",
+  "knowledge": [
+    {
+      "source": "LOCAL_TOOL_GUIDE/addition",
+      "text": "Unit test failure: in src/calculator.py, fix add(a,b) returning a-b rather than a+b."
+    }
+  ],
+  "selected_tool": "fix_add_operator",
+  "tool_reason": "Offline deterministic rule baseline (NOT an LLM prediction)",
+  "model_tool_response": "",
+  "remediation": {
+    "applied": true,
+    "error": "",
+    "patch": "--- before/src/calculator.py\n+++ after/src/calculator.py\n@@ -1,4 +1,4 @@\n \"\"\"Arithmetic module.\"\"\"\n \n def add(a: int, b: int) -> int:\n-    return a - b\n+    return a + b\n",
+    "file": "src/calculator.py"
+  },
+  "recheck": {
+    "stage": "UNIT_TESTS",
+    "exit_code": 0,
+    "output": "\ntest_negative (test_calculator.CalculatorTests.test_negative) ... ok\ntest_positive (test_calculator.CalculatorTests.test_positive) ... ok\ntest_zero (test_calculator.CalculatorTests.test_zero) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+    "seconds": 0.714
+  },
+  "build": {
+    "stage": "BUILD",
+    "exit_code": 0,
+    "output": "\n",
+    "seconds": 0.714
+  },
+  "success": true,
+  "seconds": 2.159
+}

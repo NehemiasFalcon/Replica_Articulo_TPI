@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "dataset": "data_original",
+  "date_utc": "2026-11-18T04:39:52.616744+00:00",
+  "mode": "heuristic",
+  "model": null,
+  "total_cases": 250,
+  "completed_cases": 250,
+  "error_cases": 0,
+  "mean_cited_line_precision_proxy": 0.82135,
+  "localization_any_case_rate": 0.98,
+  "localization_90_case_rate": 0.652,
+  "note": "These are localization PROXY metrics using the public label.json abnormal segment. NOT the published LogSage RQ1 Precision/Recall/F1 scores. Heuristic mode is NOT LLM inference.",
+  "paper_reported_f1_gpt4o": 0.9898
+}

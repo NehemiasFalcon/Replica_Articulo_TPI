@@ -1,0 +1,11 @@
+{
+  "note": "Preprocessing evidence preservation proxy, NOT LogSage paper RCA F1. No LLM was run.",
+  "cases": 250,
+  "cases_with_any_labeled_evidence": 244,
+  "any_evidence_rate": 0.976,
+  "mean_annotated_line_recall_proxy": 0.59166,
+  "mean_selected_blocks": 10.15,
+  "mean_selected_tokens_proxy": 9542.38,
+  "mean_selected_log_line_fraction": 0.50506,
+  "cases_with_zero_blocks": 0
+}

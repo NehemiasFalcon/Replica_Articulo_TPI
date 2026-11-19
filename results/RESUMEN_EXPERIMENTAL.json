@@ -1,0 +1,20 @@
+{
+  "source": "dataset-main.zip uploaded by user (Xu et al. LogSage data)",
+  "execution": {
+    "total_real_test_cases": 250,
+    "heuristic_completed": 250,
+    "heuristic_any_label_hit_cases": 245,
+    "heuristic_any_label_hit_rate": 0.98,
+    "heuristic_citation_precision_proxy_mean": 0.82135,
+    "preprocessor_any_label_evidence_cases": 244,
+    "preprocessor_any_label_evidence_rate": 0.976,
+    "preprocessor_mean_annotated_line_recall_proxy": 0.59166,
+    "unit_tests_passed": 14
+  },
+  "published_data_reanalysis": {
+    "table_II_comparisons": 15,
+    "all_table_II_values_match": true,
+    "ablation_variants": 4
+  },
+  "restrictions": "No local LLM/Ollama installed: new AI inference NOT run. Local experiments are heuristic and preprocessing, NOT new LogSage RCA F1."
+}

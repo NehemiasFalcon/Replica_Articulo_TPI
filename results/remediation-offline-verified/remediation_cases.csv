@@ -1,0 +1,4 @@
+﻿scenario,mode,initial_failed,selected_tool,tool_applied,retest_passed,pipeline_recovered,seconds
+unit,rule,1,fix_add_operator,1,1,1,2.159
+lint,rule,1,lint_fix,1,1,1,2.772
+unsupported,rule,1,no_fix,0,0,0,0.72

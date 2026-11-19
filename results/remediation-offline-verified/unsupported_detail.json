@@ -1,0 +1,26 @@
+{
+  "scenario": "unsupported",
+  "mode": "rule",
+  "model": null,
+  "workspace": "/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unsupported",
+  "initial": {
+    "stage": "UNIT_TESTS",
+    "exit_code": 1,
+    "output": "\ntest_status (test_service.ServiceTests.test_status) ... FAIL\n\n======================================================================\nFAIL: test_status (test_service.ServiceTests.test_status)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/work_logsage/LogSage_experimento_gratis/results/remediation-offline-verified/workspaces/unsupported/tests/test_service.py\", line 6, in test_status\n    self.assertEqual(status(), \"online\")\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'offline' != 'online'\n- offline\n?  ^^\n+ online\n?  ^\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n",
+    "seconds": 0.719
+  },
+  "diagnosis": "UNIT_TESTS: test_status expects online but gets offline; no allowed remediation tool handles this failure.",
+  "knowledge": [],
+  "selected_tool": "no_fix",
+  "tool_reason": "Offline deterministic rule baseline (NOT an LLM prediction)",
+  "model_tool_response": "",
+  "remediation": {
+    "applied": false,
+    "error": "No applicable tool was selected",
+    "patch": ""
+  },
+  "recheck": null,
+  "build": null,
+  "success": false,
+  "seconds": 0.72
+}

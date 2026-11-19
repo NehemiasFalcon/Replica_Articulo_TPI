@@ -1,0 +1,24 @@
+{
+  "experiment": "re-analysis of AUTHORS original CSV; not new LLM inference",
+  "baseline_comparisons": 15,
+  "all_match_paper_table_II": true,
+  "cases_per_group": {
+    "GPT_4o/LogSage/default": 250,
+    "GPT_4o/LogPrompt/CoT": 250,
+    "GPT_4o/LogPrompt/InContext": 250,
+    "GPT_4o/LogGPT/1": 250,
+    "GPT_4o/LogGPT/2": 250,
+    "Claude37/LogSage/default": 250,
+    "Claude37/LogPrompt/CoT": 250,
+    "Claude37/LogPrompt/InContext": 250,
+    "Claude37/LogGPT/1": 250,
+    "Claude37/LogGPT/2": 250,
+    "Deepseek_V3/LogSage/default": 250,
+    "Deepseek_V3/LogPrompt/CoT": 211,
+    "Deepseek_V3/LogPrompt/InContext": 211,
+    "Deepseek_V3/LogGPT/1": 210,
+    "Deepseek_V3/LogGPT/2": 210
+  },
+  "ablation_groups": 4,
+  "note": "DeepSeek V3 has incomplete per-method baseline rows (210/211 for non-LogSage methods), as in the source CSV. No fabricated missing cases."
+}

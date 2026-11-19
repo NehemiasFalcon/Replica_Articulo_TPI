@@ -1,0 +1,2 @@
+﻿case_id,project,pair,lines,label_start,label_end,mode,model,prediction_count,matched_count,precision_citas,localizacion_any,localizacion_90,prompt_tokens_approx,seconds,error,cited_lines,label_ranges
+AdminLTE/pair_1,AdminLTE,pair_1,325,47,323,ollama,qwen2.5-coder:3b,0,0,0,0,0,5063,252.703,,,"[[47, 323]]"

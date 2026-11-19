@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "dataset": "data_original",
+  "date_utc": "2026-11-18T19:48:56.845330+00:00",
+  "mode": "ollama",
+  "model": "qwen2.5-coder:3b",
+  "total_cases": 1,
+  "completed_cases": 1,
+  "error_cases": 0,
+  "mean_cited_line_precision_proxy": 1.0,
+  "localization_any_case_rate": 1.0,
+  "localization_90_case_rate": 1.0,
+  "note": "These are localization PROXY metrics using the public label.json abnormal segment. NOT the published LogSage RQ1 Precision/Recall/F1 scores. Heuristic mode is NOT LLM inference.",
+  "paper_reported_f1_gpt4o": 0.9898
+}

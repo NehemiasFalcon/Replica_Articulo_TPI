@@ -1,0 +1,5 @@
+# La ejecución de la línea base no requiere dependencias externas.
+# Para extracción de plantillas según Drain3 (opcional):
+# pip install drain3 tiktoken
+# Para ejecutar pruebas (opcional):
+# pip install pytest

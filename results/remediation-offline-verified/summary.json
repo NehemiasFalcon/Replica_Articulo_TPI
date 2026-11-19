@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-11-18T06:47:33.839773+00:00",
+  "mode": "rule",
+  "total_cases": 3,
+  "initial_failures": 3,
+  "tools_selected": 2,
+  "repairs_applied": 2,
+  "successful_repairs": 2,
+  "tool_coverage_rate": 0.6667,
+  "rerun_success_rate": 1.0,
+  "end_to_end_recovery_rate": 0.6667,
+  "note": "Synthetic runnable scenarios. This is an unofficial LogSage-inspired tool-calling remediation demo, not the industrial evaluation of Xu et al. Offline rule mode is NOT AI."
+}

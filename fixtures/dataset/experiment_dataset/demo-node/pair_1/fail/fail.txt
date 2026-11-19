@@ -1,0 +1,15 @@
+Install dependencies
+npm ci completed
+Build application
+compiled 25 files
+Begin Jest
+Test suite user.test.js
+PASS render form
+PASS validate phone
+Test suite payment.test.js
+Running validateTotal
+Expected: 100
+Received: 90
+FAIL payment.test.js > validateTotal
+Error: assertion mismatch
+Process exited with code 1
